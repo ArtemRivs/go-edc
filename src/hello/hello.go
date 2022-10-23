@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+var messsage string
+messsage = "Usual way to define variable"
+messsage2 := "Short way to define variable"
+
 func main(){
-	fmt.Print("Hello, World!\n");
+	fmt.Print(messsage);
+	fmt.Print(messsage2);
 }
