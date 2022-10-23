@@ -5,5 +5,8 @@ import (
 )
 
 func Greetings(name string) string {
-	return "Привет, " + strings.Title(strings.ToLower(strings.Trim(name, " "))) + "!"
+	name = strings.Trim(name, " ")
+	name = strings.ToLower(name)
+	name = strings.Title()
+	return "Привет, " + name + "!"
 }
