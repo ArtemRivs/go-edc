@@ -9,4 +9,9 @@ messsage2 := "Short way to define variable"
 func main(){
 	fmt.Print(messsage);
 	fmt.Print(messsage2);
+	
+	firstName := "John"
+	lastName := "Smith"
+	
+	fmt.Print(firstName + " " + lastName)
 }
