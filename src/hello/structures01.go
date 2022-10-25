@@ -6,9 +6,10 @@ import (
 )
 
 type User struct {
-    ID        int64  `json:"id"`
-    Email     string `json:"email"`
-    FirstName string `json:"first_name"`
+    ID          int64  `json:"id"`
+    Email       string `json:"email"`
+    FirstName   string `json:"first_name"`
+    SecondName  string `json:"second_name"`
 }
 
 func main() {
@@ -16,7 +17,7 @@ func main() {
     u.ID = 22
     u.Email = "test@test.com"
     u.FirstName = "John"
-
+    u.SecondName = "Smith"
     bs, _ := json.Marshal(u)
 
     fmt.Println(string(bs)) // {"id":22,"email":"test@test.com","first_name":"John"}
