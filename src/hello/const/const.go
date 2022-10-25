@@ -7,14 +7,12 @@ const (
 )
 
 func ErrorMessageToCode(msg string) int {
-	var resCode int
+	var resCode = UNKNOWN
 	switch(msg) {
 		case "OK":
 			resCode = OK
 		case "CANCELLED":
 			resCode = CANCELLED
-		default:
-			resCode = UNKNOWN
 	}
 
 	return resCode
