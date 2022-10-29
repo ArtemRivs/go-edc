@@ -1,11 +1,10 @@
-package solution
+package main
 
-func SafeWrite(nums [5]int, i, val int) [5]int {
+import "fmt"
 
-	if i >= 0 && i < len(nums) {
-		nums[i] = val
-	}
+func main() {
 
-	return nums
+	var a [5]int
+	fmt.Println("emp: ", a)
 
 }
