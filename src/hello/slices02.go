@@ -9,8 +9,16 @@ func main() {
 	// fmt.Println("Modified nums slice: ", nums)
 
 	nums := []string{"one", "two", "three", "four", "five", "six", "seven", "eight"}
-	Remove(nums, 1)
-	fmt.Println("Modified nums slice: ", nums)
+	fmt.Println("nums slice: ", nums)
+	newNums := nums[:3]
+	fmt.Println("newNums slice [:3]: ", newNums)
+	newNums = nums[2:]
+	fmt.Println("newNums slice [2:]: ", newNums)
+	newNums = nums[1:6]
+	fmt.Println("newNums slice [1:6]: ", newNums)
+
+	//Remove(nums, 1)
+	//fmt.Println("Modified nums slice: ", nums)
 
 }
 func Remove(nums []string, i int) []string {
