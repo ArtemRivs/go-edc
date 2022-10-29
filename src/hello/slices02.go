@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+	//"unsafe"
+	//"unsafe"
+)
 
 func main() {
 	// nums := []int{1, 2, 3, 4, 5, 6, 7, 8}
@@ -8,7 +13,7 @@ func main() {
 	// Remove(nums, 5)
 	// fmt.Println("Modified nums slice: ", nums)
 
-	nums := []string{"one", "two", "three", "four", "five", "six", "seven", "eight"}
+	nums := []string{"one", "two", "three", "four", "five", "sixsix", "seven", "eight"}
 	fmt.Println("nums slice: ", nums)
 	newNums := nums[:3]
 	fmt.Println("newNums slice [:3]: ", newNums)
@@ -16,6 +21,10 @@ func main() {
 	fmt.Println("newNums slice [2:]: ", newNums)
 	newNums = nums[1:6]
 	fmt.Println("newNums slice [1:6]: ", newNums)
+	fmt.Println("Sizeof newNums: ", unsafe.Sizeof(newNums))
+
+	someNums := [2]int{10, 20}
+	fmt.Println("Sizeof someNums: ", unsafe.Sizeof(someNums))
 
 	//Remove(nums, 1)
 	//fmt.Println("Modified nums slice: ", nums)
