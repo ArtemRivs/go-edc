@@ -25,8 +25,8 @@ func main() {
 	fmt.Println("slice03 [5:] len: ", len(slice03))
 	fmt.Println("slice03 [5:]: ", slice03)
 
-	slice04 := array[1:11]
-	fmt.Println("slice04 [1:11] len: ", len(slice04))
-	fmt.Println("slice04 [1:11]: ", slice04)
+	slice04 := array[1:2]
+	fmt.Println("slice04 [1:2] len: ", len(slice04))
+	fmt.Println("slice04 [1:2]: ", slice04)
 
 }
