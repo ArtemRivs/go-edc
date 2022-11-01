@@ -18,13 +18,27 @@ func main() {
 
 	// }
 
-	slice := make([]string, 0, 6)
-	slice = append(slice, "one")
-	slice = append(slice, "two")
-	slice = append(slice, "three")
-	slice = append(slice, "four")
-	slice = append(slice, "five")
-	slice = append(slice, "six")
-	fmt.Println("slice: ", slice)
+	// slice := make([]string, 0, 6)
+	slice := []string{"one", "two", "three", "four", "five", "six"}
 
+	// for i, value := range slice {
+	// 	fmt.Println("index: ", i, "value: ", value)
+	// }
+	fmt.Println("slice 01: ", slice)
+	slice = someChanges(slice)
+	fmt.Println("slice 03: ", slice)
+
+	// fmt.Println("slice: ", slice)
+
+}
+
+func someChanges(s []string) []string {
+
+	for i, value := range s {
+		s[i] = value + "_01"
+	}
+
+	fmt.Println("slice 02: ", s)
+
+	return s
 }
