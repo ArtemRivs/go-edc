@@ -24,14 +24,31 @@ func main() {
 	// for i, value := range slice {
 	// 	fmt.Println("index: ", i, "value: ", value)
 	// }
-	fmt.Println("slice 01: ", slice)
-	slice = someChanges(slice)
-	fmt.Println("slice 03: ", slice)
-
+	// fmt.Println("slice 01: ", slice)
+	// slice = someChanges(slice)
+	// fmt.Println("slice 03: ", slice)
 	// fmt.Println("slice: ", slice)
 
-	slice[0] = "ten"
-	fmt.Println("slice 04: ", slice)
+	_slice := slice
+
+	fmt.Println("slice  01: ", slice)
+	fmt.Println("_slice 01: ", _slice)
+
+	_slice[0] = "ten"
+	_slice[len(_slice)-1] = "twenty"
+
+	fmt.Println("slice:  02", slice)
+	fmt.Println("_slice: 02", _slice)
+
+	nums := []int{1, 2, 3, 4, 5}
+	numsCp := make([]int, 0)
+	copy(numsCp, nums)
+	fmt.Println("nums: ", nums)
+	fmt.Println("numsCp: ", numsCp)
+
+	numsB := make([]int, len(nums))
+	copy(numsB, nums)
+	fmt.Println("numsB: ", numsB)
 
 }
 
