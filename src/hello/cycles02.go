@@ -30,6 +30,9 @@ func main() {
 
 	// fmt.Println("slice: ", slice)
 
+	slice[0] = "ten"
+	fmt.Println("slice 04: ", slice)
+
 }
 
 func someChanges(s []string) []string {
