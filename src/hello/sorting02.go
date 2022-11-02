@@ -27,6 +27,7 @@ func main() {
 			nums2[pointer] = nums2[c]
 		}
 	}
+	nums2 = nums2[:pointer+1]
 	fmt.Println("pointer", pointer)
 	fmt.Println("nums2", nums2)
 
