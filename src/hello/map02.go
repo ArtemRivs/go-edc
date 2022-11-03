@@ -1,16 +1,20 @@
 package main
 
-func main() {
 
-	IDs := []int64{67, 47, 27, 33, 834, 26, 10, 44, 81}
-	m := map[int64]bool{}
+func UniqueUserIDs(userIDs []int64) []int64{
 
-	for pointer, id := range IDs {
-
+	unic := map[int64]bool{}
+	newSlice :=[]int64{}
+	for c, id := range userIDs {
+		if map[id] !=false {
+			continue
+		}
+		unic[id] = true
+		newSlice = append(newSlice, map[id])
 	}
 
-	// for c, value := range str {
-	// 	fmt.Println("c: ", c, "value: ", value)
-	// }
+	return newSlice
 
 }
+
+
