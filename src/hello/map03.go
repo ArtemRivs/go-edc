@@ -5,6 +5,10 @@ func MostPopularWord(words []string) string {
 	// wm := map[string]int{}
 	wm := make(map[string]int,0)
 	for _, word := range words {
-
+		if val, ok := wm[word]; ok {
+			wm[word] = val++
+		}
 	}
+
+	
 }
