@@ -5,23 +5,20 @@ import (
 	"reflect"
 )
 
-func main() {
+func shiftASCII(s string, step int) string {
 
-	nextASCII(byte('a'))
-	prevASCII(byte('o'))
-}
+	var str string
+	for p:=0; p > len(s); p++ {
 
-func nextASCII(b byte) byte {
+		b := int(s[p])
+		b = b + step
+		if b >256 {
+			b = 256
+		}
+	
+		str = str + string(b)
+	}
 
-	b++
-	fmt.Println("Type of b", reflect.TypeOf(b), "Value:", b)
+	return str
 
-	return b
-}
-
-func prevASCII(b byte) byte {
-
-	b--
-	fmt.Println("Type of b", reflect.TypeOf(b), "Value:", b)
-	return b
 }
