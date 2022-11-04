@@ -1,4 +1,4 @@
-package solution
+package main
 
 import (
 	"fmt"
@@ -12,11 +12,16 @@ func main() {
 }
 
 func nextASCII(b byte) byte {
-	fmt.Println(reflect.TypeOf(b))
+
+	b++
+	fmt.Println("Type of b", reflect.TypeOf(b), "Value:", b)
+
 	return b
 }
 
 func prevASCII(b byte) byte {
-	fmt.Println(reflect.TypeOf(b))
+
+	b--
+	fmt.Println("Type of b", reflect.TypeOf(b), "Value:", b)
 	return b
 }
