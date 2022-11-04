@@ -1,24 +1,27 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
-)
+import "fmt"
 
-func shiftASCII(s string, step int) string {
+func main() {
 
+	s := "abc"
+	var step int = -511
 	var str string
-	for p:=0; p > len(s); p++ {
+
+	for p := 0; p < len(s); p++ {
 
 		b := int(s[p])
 		b = b + step
-		if b >256 {
-			b = 256
+
+		// fmt.Println("p:", p, "s[p]", s[p], "b", b)
+		// fmt.Println("100%5:", 100%5, "100%3", 100%3, "-511%256", -511%256)
+
+		if b > 256 || b < 0 {
+			b = b % 256
 		}
-	
-		str = str + string(b)
+		str = str + string(byte(b))
 	}
 
-	return str
+	fmt.Println("str:", str)
 
 }
