@@ -1,11 +1,14 @@
 package main
 
 // import "unicode"
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
-	s := "Hello!"
+	s := "✪ superstar ✪"
 	fmt.Println("isASCII", isASCII(s))
 
 }
@@ -14,8 +17,12 @@ func isASCII(s string) bool {
 
 	res := true
 	strSlice := []rune(s)
+	minASCII := byte(0)
+	maxASCII := byte(255)
 
-	fmt.Println("strSlice:", strSlice)
+	fmt.Println("minASCII:", reflect.TypeOf(minASCII), string(minASCII))
+	fmt.Println("maxASCII:", string(maxASCII))
+	fmt.Println("strSlice:", reflect.TypeOf(strSlice), strSlice)
 
 	for _, ch := range strSlice {
 		fmt.Println("ch:", ch, string(ch))
