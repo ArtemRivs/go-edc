@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"unicode"
 )
 
@@ -18,14 +19,19 @@ func getUnicode(s string) string {
 
 	fmt.Println("s:", s, "r:", r)
 
-	var res string
+	// var res string
+	res := &strings.Builder{}
+
 	for _, ch := range s {
 		if unicode.Is(unicode.Latin, ch) {
-			res += string(ch)
+			// res += string(ch)
+			res.WriteString(string(ch))
 		}
 	}
 
 	fmt.Println("res:", res)
 
-	return res
+	// return res
+	return res.String()
+
 }
