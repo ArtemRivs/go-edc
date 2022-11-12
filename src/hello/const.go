@@ -20,6 +20,16 @@ const (
     Blue
 )
 
+const (
+    one = // укажите здесь формулу с iota
+    three
+    five
+    seven
+    nine
+    eleven
+)
+
+
 func ErrorMessageToCode(msg string) int {
 	var resCode = UNKNOWN
 	switch(msg) {
@@ -35,6 +45,7 @@ func ErrorMessageToCode(msg string) int {
 
 
 func main() {
-    fmt.Println(Black, Gray, White) 
-    fmt.Println(Yellow, Red, Green, Blue)
+	fmt.Println(Black, Gray, White) 
+	fmt.Println(Yellow, Red, Green, Blue)
+	fmt.Println(one, three, five, seven, nine, eleven)
 } 
