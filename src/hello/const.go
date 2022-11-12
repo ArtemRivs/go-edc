@@ -21,7 +21,7 @@ const (
 )
 
 const (
-    one = // укажите здесь формулу с iota
+    one = iota*2 + 1 // укажите здесь формулу с iota
     three
     five
     seven
