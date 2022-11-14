@@ -21,8 +21,11 @@ func main() {
     var xx int = 4
     var pp *int  = &xx                // указатель получает адрес переменной
     fmt.Println("Address:", pp)      // значение указателя - адрес переменной x
-    fmt.Println("Value:", *pp)   
+    fmt.Println("Value:", *pp)
    
+    var a int = 5
+    p := &a
+    fmt.Println(a,p) //a=5 p=0xc0000b2008   
    
    
 }
