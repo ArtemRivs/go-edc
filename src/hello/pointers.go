@@ -43,5 +43,17 @@ func main() {
   increment(&i)
   fmt.Println(i) // 43
    
+  a := 1
+  p := &a
+  b := &p
+  
+  *p = 3
+  **b = 5
+  
+  a += 4 + *p + **b
+  
+  fmt.Printf("%d",*p)   
+   
+   
    
 }
