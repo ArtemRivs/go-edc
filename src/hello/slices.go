@@ -46,7 +46,22 @@ func main() {
 
 	var nums = []int{}
 	nums = []int{1, 2, 3}
-	fmt.Println("nums", nums)	
+	fmt.Println("nums", nums)
+	
+	s := []int{1, 2, 3, 4, 5, 6}
+	fmt.Println("s:", s)
+
+	//s = s[:len(s)-1]
+	//fmt.Println("s:", s)
+
+	s = s[1:]
+	fmt.Println("s:", s)
+
+	i := 3
+	s = append(s[:i], s[i+1:]...)
+	fmt.Println("s:", s)
+	
+	
 	
 }
 
