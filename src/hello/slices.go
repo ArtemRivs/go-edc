@@ -17,13 +17,18 @@ func main() {
 // 	fmt.Println("nums2: ", nums2)
 // 	fmt.Println("nums2 lenght: ", len(nums2))
 
-	mySlice := []int{1, 2, 3, 4, 5, 6, 7}
-	//mySlice := make([]int, 7, 7)
+	mySlice := []int{1, 2, 3, 4, 5, 6}
 
-	mySlice = {1, 2, 3, 4, 5, 6, 7}
-	
+	mySlice2 := mySlice
+
+	fmt.Println("mySlice: ", mySlice)
 	fmt.Println("len: ", len(mySlice), "cap: ", cap(mySlice))
-	fmt.Println("mySlice: ", mySlice)	
+
+	mySlice[0] = 100
+	mySlice[5] = 600
+
+	fmt.Println("mySlice2: ", mySlice2)
+	fmt.Println("len: ", len(mySlice2), "cap: ", cap(mySlice2))	
 	
 	
 	
