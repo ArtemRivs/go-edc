@@ -17,8 +17,8 @@ func main() {
 // 	fmt.Println("nums2: ", nums2)
 // 	fmt.Println("nums2 lenght: ", len(nums2))
 
-	//mySlice := []int{1, 2, 3, 4, 5, 6, 7}
-	mySlice := make([]int, 7, 7)
+	mySlice := []int{1, 2, 3, 4, 5, 6, 7}
+	//mySlice := make([]int, 7, 7)
 
 	mySlice = {1, 2, 3, 4, 5, 6, 7}
 	
