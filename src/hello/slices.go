@@ -28,8 +28,30 @@ func main() {
 	mySlice[5] = 600
 
 	fmt.Println("mySlice2: ", mySlice2)
-	fmt.Println("len: ", len(mySlice2), "cap: ", cap(mySlice2))	
+	fmt.Println("len: ", len(mySlice2), "cap: ", cap(mySlice2))
 	
+	aSlice := []int{1, 2, 3, 4, 5, 6}
+
+	fmt.Println("cap:", cap(aSlice), "len:", len(aSlice))
+	fmt.Println(aSlice)
+
+	change(&aSlice)
+
+	fmt.Println("cap:", cap(aSlice), "len:", len(aSlice))
+	fmt.Println(aSlice)
+
+	dest := make([]int, 3)
+	dest = []int{1, 2, 3}
+	fmt.Println("dest", dest)
+
+	var nums = []int{}
+	nums = []int{1, 2, 3}
+	fmt.Println("nums", nums)	
 	
-	
+}
+
+func change(sl *[]int) {
+
+	*sl = append(*sl, 127)
+
 }
