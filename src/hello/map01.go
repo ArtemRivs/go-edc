@@ -13,6 +13,13 @@ func main() {
 	//m := make(map[string]string)
 	//m["foo"] = "bar"
 	fmt.Println(m)	
+	
+	var test int
+	var ok bool
+
+	test, ok = m2[10]
+	fmt.Println("test:", test, "ok:", ok)	
+	
 	*/
 	
 	str := map[string]int{"one": 1, "two": 2, "three": 3}
