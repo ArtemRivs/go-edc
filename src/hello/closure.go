@@ -2,7 +2,20 @@ package main
 
 import "fmt"
 
+func increment() func() int {
+	test := 0
+	return func() int {
+		test += 10
+		return test
+	}
+}
+
 func main() {
 
-	fmt.Println("Just for fun")
+	inc := increment()
+
+	fmt.Println(inc())
+	fmt.Println(inc())
+	fmt.Println(inc())
+
 }
