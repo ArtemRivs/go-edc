@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"src/go-edc/src/top/middle/bottom/mathxxx"
+	"./mathxxx"
 )
 
 func main() {
