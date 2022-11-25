@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"mathxxx"
+	"pack/mathxxx"
 )
 
 func main() {
