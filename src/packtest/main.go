@@ -3,13 +3,12 @@ package main
 import (
 	"fmt"
 
-	"modulos"
+	"mathix"
 )
 
 func main() {
 
-	fmt.Println("Go!")
-	s := modulos.AddInt(10, 20)
-	fmt.Println(s)
+	fmt.Println("It's goin!")
+	fmt.Println(mathix.GoTest("That's", "cool!"))
 
 }

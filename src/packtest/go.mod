@@ -2,6 +2,6 @@ module main
 
 go 1.19
 
-replace modulos => ./modulos
+replace mathix => ./mathix
 
-require modulos v0.0.0-00010101000000-000000000000
+require mathix v0.0.0-00010101000000-000000000000 // indirect
