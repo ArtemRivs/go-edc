@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 
-	"module"
+	"modulos"
 )
 
 func main() {
 
 	fmt.Println("Go!")
-	module.AddInt(10, 20)
+	s := modulos.AddInt(10, 20)
+	fmt.Println(s)
 
 }

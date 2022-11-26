@@ -2,4 +2,6 @@ module main
 
 go 1.19
 
-replace module => ./module
+replace modulos => ./modulos
+
+require modulos v0.0.0-00010101000000-000000000000

@@ -1,4 +1,4 @@
-package module
+package modulos
 
 func AddInt(a, b int) int {
 
