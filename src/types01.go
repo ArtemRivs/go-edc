@@ -1,9 +1,9 @@
-  // объявление типа
-    type MyType int 
-  // объявление метода
-  func (m MyType) String() string{
-        return fmt.Sprintf("MyType: %d", m)      
-  }
-  // вызов метода
-  var m MyType = 5
-  var s string = m.String()
+// объявление типа
+type Special int 
+// объявление метода
+func (m Special) GetString() string{
+      return fmt.Sprintf("Special: %d", m)      
+}
+// вызов метода
+var m Special = 5
+var s string = m.GetString()
