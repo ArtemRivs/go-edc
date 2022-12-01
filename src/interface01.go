@@ -49,8 +49,8 @@ func (d Duck) Fly() string {
 }
 
 func main() {
-	//interfaceValues()
-	typeAssertionAndPolymorphism()
+	interfaceValues()
+	// typeAssertionAndPolymorphism()
 }
 
 func interfaceValues() {
@@ -93,41 +93,41 @@ func interfaceValues() {
 	fmt.Printf("Type: %T Value: %#v\n", emptyInterface, emptyInterface)
 }
 
-func typeAssertionAndPolymorphism() {
-	var runner Runner
-	fmt.Printf("Type: %T Value: %#v\n", runner, runner)
+// // func typeAssertionAndPolymorphism() {
+// // 	var runner Runner
+// // 	fmt.Printf("Type: %T Value: %#v\n", runner, runner)
 
-	john := &Human{"John"}
-	runner = john
-	polymorphism(john)
-	typeAssertion(john)
+// // 	john := &Human{"John"}
+// // 	runner = john
+// // 	polymorphism(john)
+// // 	typeAssertion(john)
 
-	donald := &Duck{Name: "Donald", Surname: "Duck"}
-	runner = donald
-	polymorphism(donald)
-	typeAssertion(donald)
-}
-func polymorphism(runner Runner) {
-	fmt.Println(runner.Run())
-}
+// // 	donald := &Duck{Name: "Donald", Surname: "Duck"}
+// // 	runner = donald
+// // 	polymorphism(donald)
+// // 	typeAssertion(donald)
+// // }
+// // func polymorphism(runner Runner) {
+// // 	fmt.Println(runner.Run())
+// }
 
-func typeAssertion(runner Runner) {
-	fmt.Printf("Type: %T Value: %#v\n", runner, runner)
-	if human, ok := runner.(*Human); ok {
-		fmt.Printf("Type: %T Value: %#v\n", human, human)
-		human.writeCode()
-	}
-	if duck, ok := runner.(*Duck); ok {
-		fmt.Printf("Type: %T Value: %#v\n", duck, duck)
-		fmt.Println(duck.Fly())
-	}
+// func typeAssertion(runner Runner) {
+// 	fmt.Printf("Type: %T Value: %#v\n", runner, runner)
+// 	if human, ok := runner.(*Human); ok {
+// 		fmt.Printf("Type: %T Value: %#v\n", human, human)
+// 		human.writeCode()
+// 	}
+// 	if duck, ok := runner.(*Duck); ok {
+// 		fmt.Printf("Type: %T Value: %#v\n", duck, duck)
+// 		fmt.Println(duck.Fly())
+// 	}
 
-	switch v := runner.(type) {
-	case *Human:
-		fmt.Println(v.Run())
-	case *Duck:
-		fmt.Println(v.Swim())
-	default:
-		fmt.Printf("Type: %T Value: %#v\n", v, v)
-	}
-}
+// 	switch v := runner.(type) {
+// 	case *Human:
+// 		fmt.Println(v.Run())
+// 	case *Duck:
+// 		fmt.Println(v.Swim())
+// 	default:
+// 		fmt.Printf("Type: %T Value: %#v\n", v, v)
+// 	}
+// }
