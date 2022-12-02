@@ -39,8 +39,11 @@ func main() {
 	a := Square{length: 15.5}
 	b := Circle{radius: 10.4}
 	c := Rectangle{firstSide: 1.8, secondSide: 4.2}
+	//площадь квадрата
 	printShapeArea(a)
+	//площадь окружности
 	printShapeArea(b)
+	//площадь прямоугольника
 	printShapeArea(c)
 
 }
