@@ -4,6 +4,11 @@ import (
 	"fmt"
 )
 
+type Player interface{
+	Play(string)
+	Stop()
+}
+
 type TapePlayer struct {
 	paramTP string
 }
@@ -27,7 +32,7 @@ func (t CDPlayer) Stop() {
 	fmt.Println("Stop playing")
 }
 
-func runPlayList(device TapePlayer, songs []string) {
+func runPlayList(device Player, songs []string) {
 	for _, song := range songs {
 		device.Play(song)
 	}
@@ -35,7 +40,14 @@ func runPlayList(device TapePlayer, songs []string) {
 }
 
 func main() {
+	
 	mix := []string{"Song 2", "Smile", "Nevermind"}
 	device := TapePlayer{}
 	runPlayList(device, mix)
+
+	device2 := CDPlayer{}
+	runPlayList(device2, mix)
+
+	
+	
 }
