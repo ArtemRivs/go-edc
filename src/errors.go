@@ -1,8 +1,37 @@
-func foo() (int, error) { 
-    // в теле функции может быть ошибка
+type SliceError []error
+
+func (errs SliceError) Error() string {
+    var out string
+    for _, err := range errs {
+        out += err.Error() + ";"
+    }
+    return strings.TrimRight(out, `;`)
 }
 
-result, err = foo()
-if err != nil {
-    // handle error
+func MyCheck(input string) error {
+    var (
+        err      SliceError
+        spaces   int
+        hasDigit bool
+    )
+    if len([]rune(input)) >= 20 {
+        err = SliceError{errors.New(`line is too long`)}
+    }
+    for _, ch := range input {
+        if ch == ' ' {
+            spaces++
+        } else if ch >= '0' && ch <= '9' {
+            hasDigit = true
+        }
+    }
+    if hasDigit {
+        err = append(err, errors.New(`found numbers`))
+    }
+    if spaces != 2 {
+        err = append(err, errors.New(`no two spaces`))
+    }
+    if len(err) == 0 {
+        return nil
+    }
+    return err
 } 
